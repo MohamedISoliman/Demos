@@ -9,9 +9,7 @@ import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
 import android.os.SystemClock
 
-
-
-public class MyRenderer : GLSurfaceView.Renderer {
+class MyRenderer : GLSurfaceView.Renderer {
 
   var angle : Float = 0f
 
@@ -96,7 +94,7 @@ public class MyRenderer : GLSurfaceView.Renderer {
   override fun onSurfaceCreated(gl: GL10?, config: EGLConfig?) {
 
     // Set the background frame color
-    GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    GLES20.glClearColor(0.10f, 0.0f, 0.40f, 1.0f);
 
   }
 }

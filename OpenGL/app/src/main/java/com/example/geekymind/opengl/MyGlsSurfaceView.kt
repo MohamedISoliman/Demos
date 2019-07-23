@@ -4,9 +4,9 @@ import android.content.Context
 import android.opengl.GLSurfaceView
 import android.view.MotionEvent
 
-public class MyGlsSurfaceView(context: Context) : GLSurfaceView(context) {
+class MyGlsSurfaceView(context: Context) : GLSurfaceView(context) {
 
-  private val renderer: GLSurfaceView.Renderer
+  private val renderer: Renderer
 
   private val TOUCH_SCALE_FACTOR = 180.0f / 320f
   private var mPreviousX: Float = 0.toFloat()
@@ -21,7 +21,7 @@ public class MyGlsSurfaceView(context: Context) : GLSurfaceView(context) {
     setEGLContextClientVersion(2);
     renderer = MyRenderer()
     setRenderer(renderer)
-    renderMode = GLSurfaceView.RENDERMODE_WHEN_DIRTY;
+    renderMode = RENDERMODE_WHEN_DIRTY;
   }
 
   override fun onTouchEvent(e: MotionEvent): Boolean {
